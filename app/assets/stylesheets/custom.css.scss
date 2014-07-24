@@ -1,0 +1,161 @@
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.container-main {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  height:250px;
+  width:100%;
+  position:relative;
+  top: 50px;
+}
+.gm-style{
+	overflow:visible;
+}
+#map-wrapper{
+  height:500px;
+  width:500px;
+}
+
+#map-canvas{
+	height: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 50%;
+  position:absolute;
+  top:150px;
+}
+.controls {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  width: 400px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  margin-left: -1px;
+  padding-left: 14px;  /* Regular padding-left + 1. */
+  width: 401px;
+}
+
+.pac-container {
+  font-family: Roboto;
+  top:40px;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+  overflow:visible;
+  top:-50px
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+#placeForm{
+  width: 60%;
+  margin: 0 auto;
+}
+.geoForm{
+  width:45%;
+  margin:0 2.5% 2.5%;
+  float:left;
+}
+#geoLabel{
+  width:100%;
+  text-align:center;
+}
+#geocomplete{
+
+}
+#transitSelect{
+  width:50%;
+  float:left;
+  margin:0 0 10px;
+  text-align:center;
+}
+#transitButtons{
+  width: 100%;
+}
+.transitButtonSpan{
+  width:15%;
+  display:inline-block;
+}
+.transitButton{
+  width: 100%;
+}
+.transitLabel{
+  width:100%;
+  text-align:center;
+  padding:0;
+}
+#typeSelect{
+  width:50%;
+  float:left;
+  margin:0 0 10px;
+  text-align:center;
+}
+#typeButtons{
+  width: 100%;
+}
+.typeButtonSpan{
+  width:15%;
+  display:inline-block;
+}
+.typeButton{
+  width: 100%;
+}
+.typeLabel{
+  width:100%;
+  text-align:center;
+  padding:0;
+}
+#hoodDropdown{
+  width:50%;
+  margin:0 auto 20px;
+}
+#find {
+  position: relative;
+  margin: 0 auto;
+}
+
+.map_canvas { 
+  width: 50%; 
+  height: 400px; 
+  margin: 10px auto;
+  border: 10px solid #FFF;
+}

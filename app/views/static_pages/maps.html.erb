@@ -1,0 +1,62 @@
+<% content_for :head do %>
+	<script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+	<% end %>
+
+<div id="placeForm">
+	<form role="form">
+	    <div class="form-group geoForm">
+	      <label for="geocompleteStart" id="geoLabel">Where are you coming from?</label>
+	      <input id="geocompleteStart" type="text" class="form-control" placeholder="Type a place or address">
+	    </div>
+
+	    <div class="form-group geoForm">
+	      <label for="geocompleteEnd" id="geoLabel">Where are you going after? (optional)</label>
+	      <input id="geocompleteEnd" type="text" class="form-control" placeholder="Type a place or address">
+	    </div>
+
+		<div id="transitSelect">
+	    	<label>How are you getting there?</label>
+		    <div id="transitButtons">
+		    	<div class="transitButtonSpan">
+		    		<input id="trasitCar" class="transitButton" type="radio" name="transitRadioOptions" value="car">
+				    <label class="radio-inline transitLabel">
+					   Car
+					</label>
+				</div>
+				<div class="transitButtonSpan">
+					<input id="transitBike" class="transitButton" type="radio" name="transitRadioOptions"  value="bike">
+					<label class="radio-inline transitLabel">
+					   Bike
+					</label>
+				</div>
+				<div class="transitButtonSpan">
+					<input id="transitPublic" class="transitButton" type="radio" name="transitRadioOptions" value="transit">
+					<label class="radio-inline transitLabel">
+					   Transit
+					</label>
+				</div>
+			</div>
+		</div>
+		<div id="typeSelect">
+			<label>What are you looking for?</label>
+			<div id="typeButtons">
+		    	<div class="typeButtonSpan">
+		    		<input id="typeBar" class="typeButton" type="radio" name="typeRadioOptions" value="bar">
+				    <label class="radio-inline typeLabel">
+					   Bar
+					</label>
+				</div>
+				<div class="typeButtonSpan">
+		    		<input id="typeCoffee" class="typeButton" type="radio" name="typeRadioOptions" value="coffee">
+				    <label class="radio-inline typeLabel">
+					   Coffee
+					</label>
+				</div>
+			</div>
+		</div>
+		
+	    <button id="find" value="find" type="submit" class="btn btn-default">Find</button>
+	</form>
+</div>
+
+<div class="map_canvas"></div>

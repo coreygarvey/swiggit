@@ -1,0 +1,264 @@
+{
+  "region": {
+    "span": {
+      "latitude_delta": 0.0016616999999996551,
+      "longitude_delta": 0.024338900000032027
+    },
+    "center": {
+      "latitude": 37.76678075,
+      "longitude": -122.42314055
+    }
+  },
+  "total": 20,
+  "businesses": [
+    {
+      "is_claimed": true,
+      "rating": 4.5,
+      "mobile_url": "http://m.yelp.com/biz/l-ardoise-bistro-san-francisco",
+      "rating_img_url": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+      "review_count": 873,
+      "name": "L'ardoise Bistro",
+      "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/BhcCQHCBA8r9nKDodAds7w/ms.jpg",
+      "rating_img_url_small": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+      "url": "http://www.yelp.com/biz/l-ardoise-bistro-san-francisco",
+      "menu_date_updated": 1387643065,
+      "phone": "4154372600",
+      "snippet_text": "We went here for our two-year anniversary on the recommendation of a trusted friend... and then we remembered why we trust him so much, especially when it...",
+      "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/KnKluJQ1Q7RzuAobhLwTNw/ms.jpg",
+      "categories": [
+        [
+          "French",
+          "french"
+        ]
+      ],
+      "display_phone": "+1-415-437-2600",
+      "rating_img_url_large": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+      "menu_provider": "single_platform",
+      "id": "l-ardoise-bistro-san-francisco",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "15th St & Henry St",
+        "city": "San Francisco",
+        "display_address": [
+          "151 Noe St",
+          "Duboce Triangle",
+          "San Francisco, CA 94114"
+        ],
+        "geo_accuracy": 8,
+        "neighborhoods": [
+          "Duboce Triangle"
+        ],
+        "postal_code": "94114",
+        "country_code": "US",
+        "address": [
+          "151 Noe St"
+        ],
+        "coordinate": {
+          "latitude": 37.7665897,
+          "longitude": -122.4329882
+        },
+        "state_code": "CA"
+      }
+    },
+    {
+      "is_claimed": true,
+      "rating": 4.0,
+      "mobile_url": "http://m.yelp.com/biz/chow-san-francisco",
+      "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+      "review_count": 1582,
+      "name": "Chow",
+      "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/4OeUx-fwyOsDTOQWFEZYtQ/ms.jpg",
+      "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+      "url": "http://www.yelp.com/biz/chow-san-francisco",
+      "menu_date_updated": 1387611249,
+      "phone": "4155522469",
+      "snippet_text": "Very limited menu, but what they do serve is indeed good food. \n\nServers were so nice and welcoming! \n\nNo steaks and most items were organic.",
+      "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/Gve9TXo60e97F66pN5G13Q/ms.jpg",
+      "categories": [
+        [
+          "American (Traditional)",
+          "tradamerican"
+        ],
+        [
+          "Comfort Food",
+          "comfortfood"
+        ]
+      ],
+      "display_phone": "+1-415-552-2469",
+      "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "menu_provider": "single_platform",
+      "id": "chow-san-francisco",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "15th St & Market St",
+        "city": "San Francisco",
+        "display_address": [
+          "215 Church St",
+          "Castro",
+          "San Francisco, CA 94114"
+        ],
+        "geo_accuracy": 8,
+        "neighborhoods": [
+          "Castro"
+        ],
+        "postal_code": "94114",
+        "country_code": "US",
+        "address": [
+          "215 Church St"
+        ],
+        "coordinate": {
+          "latitude": 37.767301,
+          "longitude": -122.4288931
+        },
+        "state_code": "CA"
+      }
+    },
+    {
+      "is_claimed": true,
+      "rating": 4.0,
+      "mobile_url": "http://m.yelp.com/biz/walzwerk-san-francisco",
+      "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+      "review_count": 786,
+      "name": "Walzwerk",
+      "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/zsECRox7BZvm60DZ7IdMtA/ms.jpg",
+      "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+      "url": "http://www.yelp.com/biz/walzwerk-san-francisco",
+      "menu_date_updated": 1387617231,
+      "phone": "4155517181",
+      "snippet_text": "Walzwerk is probably my favorite German restaurant.  The service is great.  The food is delicious.  The beer is plentiful.\n\nMy choice of food items?  Jäger...",
+      "image_url": "http://s3-media3.fl.yelpcdn.com/bphoto/-Ig3Q-z7-5GH4rLSnWU-Kw/ms.jpg",
+      "categories": [
+        [
+          "German",
+          "german"
+        ]
+      ],
+      "display_phone": "+1-415-551-7181",
+      "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "menu_provider": "single_platform",
+      "id": "walzwerk-san-francisco",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "14th St & 15th St",
+        "city": "San Francisco",
+        "display_address": [
+          "381 S Van Ness Ave",
+          "Mission",
+          "San Francisco, CA 94103"
+        ],
+        "geo_accuracy": 9,
+        "neighborhoods": [
+          "Mission"
+        ],
+        "postal_code": "94103",
+        "country_code": "US",
+        "address": [
+          "381 S Van Ness Ave"
+        ],
+        "coordinate": {
+          "latitude": 37.7672658,
+          "longitude": -122.4175768
+        },
+        "state_code": "CA"
+      }
+    },
+    {
+      "is_claimed": false,
+      "rating": 3.5,
+      "mobile_url": "http://m.yelp.com/biz/chilango-san-francisco-2",
+      "rating_img_url": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
+      "review_count": 380,
+      "name": "Chilango",
+      "snippet_image_url": "http://s3-media1.fl.yelpcdn.com/photo/NrI8lRftDWy2utfhO2nq9Q/ms.jpg",
+      "rating_img_url_small": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/2e909d5d3536/ico/stars/v1/stars_small_3_half.png",
+      "url": "http://www.yelp.com/biz/chilango-san-francisco-2",
+      "menu_date_updated": 1404126353,
+      "phone": "4155525700",
+      "snippet_text": "Creative, modern Mexican cuisine. Our guacamole appetizer with two types of salsa and bean dip disappeared in record time. I loved my main dish of goat...",
+      "image_url": "http://s3-media1.fl.yelpcdn.com/bphoto/yg53tjaPePPeQrVCm4TitQ/ms.jpg",
+      "categories": [
+        [
+          "Mexican",
+          "mexican"
+        ]
+      ],
+      "display_phone": "+1-415-552-5700",
+      "rating_img_url_large": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
+      "menu_provider": "single_platform",
+      "id": "chilango-san-francisco-2",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "Market St & 15th St",
+        "city": "San Francisco",
+        "display_address": [
+          "235 Church St",
+          "Castro",
+          "San Francisco, CA 94114"
+        ],
+        "geo_accuracy": 8,
+        "neighborhoods": [
+          "Castro"
+        ],
+        "postal_code": "94114",
+        "country_code": "US",
+        "address": [
+          "235 Church St"
+        ],
+        "coordinate": {
+          "latitude": 37.7669723,
+          "longitude": -122.4287782
+        },
+        "state_code": "CA"
+      }
+    },
+    {
+      "is_claimed": true,
+      "rating": 4.0,
+      "mobile_url": "http://m.yelp.com/biz/little-star-pizza-san-francisco-2",
+      "rating_img_url": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+      "review_count": 1641,
+      "name": "Little Star Pizza",
+      "snippet_image_url": "http://s3-media4.fl.yelpcdn.com/photo/5TfxbWFLcI0zp2omJvZD2Q/ms.jpg",
+      "rating_img_url_small": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+      "url": "http://www.yelp.com/biz/little-star-pizza-san-francisco-2",
+      "menu_date_updated": 1387628325,
+      "phone": "4155517827",
+      "snippet_text": "Be prepared! You have been warned!!\nHave a little extra time and be patient. The place is tiny and the wait is long but no worries, it's all worth it. I...",
+      "image_url": "http://s3-media2.fl.yelpcdn.com/bphoto/CQI4lUYU_1hkwnm8HeFGkg/ms.jpg",
+      "categories": [
+        [
+          "Pizza",
+          "pizza"
+        ]
+      ],
+      "display_phone": "+1-415-551-7827",
+      "rating_img_url_large": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+      "menu_provider": "single_platform",
+      "id": "little-star-pizza-san-francisco-2",
+      "is_closed": false,
+      "location": {
+        "cross_streets": "15th St & Valencia St",
+        "city": "San Francisco",
+        "display_address": [
+          "400 Valencia St",
+          "Mission",
+          "San Francisco, CA 94103"
+        ],
+        "geo_accuracy": 9,
+        "neighborhoods": [
+          "Mission"
+        ],
+        "postal_code": "94103",
+        "country_code": "US",
+        "address": [
+          "400 Valencia St"
+        ],
+        "coordinate": {
+          "latitude": 37.7662598870271,
+          "longitude": -122.422120973633
+        },
+        "state_code": "CA"
+      }
+    }
+  ]
+}
