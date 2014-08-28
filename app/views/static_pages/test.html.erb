@@ -14,19 +14,25 @@
         <label>How are you getting there?</label>
         <div id="transitButtons">
             <div class="transitButtonSpan">
-                <input id="trasitCar" class="transitButton" type="radio" name="transitRadioOptions" value="car">
+                <input id="trasitCar" class="transitButton" type="radio" name="transitRadioOptions" value="WALKING">
+                <label class="radio-inline transitLabel">
+                   Walk
+                </label>
+            </div>
+            <div class="transitButtonSpan">
+                <input id="trasitCar" class="transitButton" type="radio" name="transitRadioOptions" value="DRIVING">
                 <label class="radio-inline transitLabel">
                    Car
                 </label>
             </div>
             <div class="transitButtonSpan">
-                <input id="transitBike" class="transitButton" type="radio" name="transitRadioOptions"  value="bike">
+                <input id="transitBike" class="transitButton" type="radio" name="transitRadioOptions"  value="BICYCLING">
                 <label class="radio-inline transitLabel">
                    Bike
                 </label>
             </div>
             <div class="transitButtonSpan">
-                <input id="transitPublic" class="transitButton" type="radio" name="transitRadioOptions" value="transit">
+                <input id="transitPublic" class="transitButton" type="radio" name="transitRadioOptions" value="TRANSIT">
                 <label class="radio-inline transitLabel">
                    Transit
                 </label>
@@ -66,30 +72,55 @@
     var directionDisplay;
     
     var map;
-    var origin = null;
-    var destination = null;
+    
     var waypoints = [];
     var markers = [];
     var directionsVisible = false;
 
-    function calcRoute() {
+    function calcRoute(mode, bar_name, origin_lat, origin_lng, dest_lat, dest_lng, loc_lat, loc_lng, locations_found) {
+        origin = '('+origin_lat+','+origin_lng+')';
+        loc = '('+loc_lat+','+loc_lng+')';
+        destination = '('+dest_lat+','+dest_lng+')';
         var directionsService = new google.maps.DirectionsService();
-        alert("calcRoute is running")
-        var mode;
-       
-
-        var request = {
-            origin: origin,
-            destination: destination,
-            travelMode: google.maps.DirectionsTravelMode.WALKING
-        };
         
-        directionsService.route(request, function(response, status) {
+        var distance = 0;
+        console.log(mode)
+        
+        // Making 2 requests to directions API for each location and adding total distance to array
+        if(mode=="WALKING"){
+            var request_1 = {origin:origin,destination:loc,travelMode: google.maps.DirectionsTravelMode.WALKING};
+        } else if (mode=="DRIVING") {
+            var request_1 = {origin:origin,destination:loc,travelMode: google.maps.DirectionsTravelMode.DRIVING};
+        } else if (mode=="BICYCLING"){
+            var request_1 = {origin:origin,destination:loc,travelMode: google.maps.DirectionsTravelMode.BICYCLING};
+        } else {
+            var request_1 = {origin:origin,destination:loc,travelMode: google.maps.DirectionsTravelMode.TRANSIT};
+        }
+        
+        directionsService.route(request_1, function(response, status) {
           if (status == google.maps.DirectionsStatus.OK) {
             // directionsDisplay.setDirections(response);
-            alert("working!!")
-            console.log(response)
-            $("body").append(response.routes[0].legs[0].duration.text);
+            distance += parseInt(response.routes[0].legs[0].duration.text,10)
+            // $("body").append(response.routes[0].legs[0].duration.text);
+            locations_found[bar_name]["distance"]=distance
+          }
+        });
+        if(mode=="WALKING"){
+            var request_2 = {origin:loc,destination:destination,travelMode: google.maps.DirectionsTravelMode.WALKING};
+        } else if (mode=="DRIVING") {
+            var request_2 = {origin:loc,destination:destination,travelMode: google.maps.DirectionsTravelMode.DRIVING};
+        } else if (mode=="BICYCLING"){
+            var request_2 = {origin:loc,destination:destination,travelMode: google.maps.DirectionsTravelMode.BICYCLING};
+        } else {
+            var request_2 = {origin:loc,destination:destination,travelMode: google.maps.DirectionsTravelMode.TRANSIT};
+        }
+        
+        directionsService.route(request_2, function(response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            // directionsDisplay.setDirections(response);
+            distance += parseInt(response.routes[0].legs[0].duration.text,10)
+            // $("body").append(response.routes[0].legs[0].duration.text);
+            locations_found[bar_name]["distance"]=distance
           }
         });
       }
@@ -103,8 +134,7 @@
         var input1 = /** @type {HTMLInputElement} */(document.getElementById('address1'));
         var autocomplete1 = new google.maps.places.Autocomplete(input1);
         
-        var points_lat = [];
-        var points_lng = [];
+        
 
         var myOptions = {
             center : new google.maps.LatLng(37.767612, -122.410971), //center to RTP
@@ -116,7 +146,17 @@
         map = new google.maps.Map(document.getElementById("google-map"), myOptions);
 
         $("#submit").on("click", function() {
+            var points_lat = [];
+            var points_lng = [];
+            var origin = null;
+            var origin_lat = null;
+            var origin_lng = null;
+            var destination = null;
+            var dest_lat = null;
+            var dest_lng = null;
+            var loc = null;
             var latlngbounds = new google.maps.LatLngBounds();
+            var mode = document.querySelector('input[name = "transitRadioOptions"]:checked').value;
             setAllMap(null);
             markers.pop();
             var locationSize = 0;
@@ -191,23 +231,41 @@
                                 var parameterMap = OAuth.getParameterMap(message.parameters);
                                 parameterMap.oauth_signature = OAuth.percentEncode(parameterMap.oauth_signature)
                                 console.log(parameterMap);
-                                $.ajax({
-                                  'url': message.action,
-                                  'data': parameterMap,
-                                  'cache': true,
-                                  'dataType': 'jsonp',
-                                  'jsonpCallback': 'cb',
-                                  'success': function(data, textStats, XMLHttpRequest) {
-                                    console.log(data);
-                                    var output = prettyPrint(data);
-                                    var destination_lat = data.businesses[0].location.coordinate.latitude;
-                                    var destination_long = data.businesses[0].location.coordinate.longitude;
-                                    destination = '('+destination_lat+','+destination_long+')';
-                                    origin = '('+points_lat[0]+','+points_lng[0]+')';
-                                    alert(destination);
-                                    alert(origin);
-                                    calcRoute();
-                                  }
+                                origin = '('+points_lat[0]+','+points_lng[0]+')';
+                                var locations_found=[]
+                                $.when(
+                                    
+                                    
+                                    $.ajax({
+                                      'url': message.action,
+                                      'data': parameterMap,
+                                      'cache': true,
+                                      'dataType': 'jsonp',
+                                      'jsonpCallback': 'cb',
+                                      'success': function(data, textStats, XMLHttpRequest) {
+                                        console.log(data);
+                                        
+
+                                        for(var i = 0; i < data.businesses.length; i++) {
+                                            var business = data.businesses[i];
+
+                                            bar_name = business["name"];
+                                            locations_found[bar_name]=[]
+                                            origin_lat = points_lat[0];
+                                            origin_lng = points_lng[0];
+                                            dest_lat = points_lat[1];
+                                            dest_lng = points_lng[1];
+                                            loc_lat = business["location"]["coordinate"]["latitude"];
+                                            loc_lng = business["location"]["coordinate"]["longitude"];
+                                            total_time = calcRoute(mode, bar_name, origin_lat, origin_lng, dest_lat, dest_lng, loc_lat, loc_lng, locations_found);
+                                            
+                                        }
+
+                                        
+                                      }
+                                    })
+                                ).then( function(){
+                                    console.log(locations_found)
                                 });
                             }
                         } else {
@@ -233,7 +291,7 @@
 
 <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
-<script type="text/javascript" src="https://raw.github.com/padolsey/prettyPrint.js/master/prettyprint.js"></script>
+
 
   
 

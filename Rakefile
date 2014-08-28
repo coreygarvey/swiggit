@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Tique::Application.load_tasks
+Swiggit::Application.load_tasks

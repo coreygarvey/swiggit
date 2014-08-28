@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Tique::Application.config.secret_key_base = '7ae286f0d383319f67e7ab8854a0ae3c86b73241bfd01b7622e5740118472c219f6f7c6abe4065125effcea68bd2fd7a8e6d31d7f83bfb8c4eb0a28bed6150fb'
+Swiggit::Application.config.secret_key_base = '7ae286f0d383319f67e7ab8854a0ae3c86b73241bfd01b7622e5740118472c219f6f7c6abe4065125effcea68bd2fd7a8e6d31d7f83bfb8c4eb0a28bed6150fb'
